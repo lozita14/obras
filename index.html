@@ -21,7 +21,7 @@
         nav {  background-color: brown; 
             display: flex;
             justify-content: space-around; 
-            position: sticky;
+            position: static;
             top:0;
         }
 
@@ -52,7 +52,7 @@
         }
 
         #contenedor-servicios {
-            display: flex;
+            display: block;
             padding: 10px;
             justify-content: space-around;
         }
@@ -120,7 +120,25 @@
         }
         #contenedor-clientes article h3 { font-style: italic;}
         #contenedor-clientes article img { width: 40%;border-radius: 50%;}
-        #izquierda, #derecha { width: 40%;}
+        #izquierda, #derecha { width: 80%;}
+        
+        @media (max-width:600px){
+            /*
+            nav{ display: block; background-color: aqua;}
+            nav a{display: block;}
+            */
+            nav {flex-wrap:wrap;
+            position: static;}
+            nav a {width:100%; text-align: center;}
+            
+            #contenedor-servicios{
+                flex-wrap: wrap;
+                
+            }
+            #izquierda,#derecha{width: 100%;}
+
+        }
+
     </style>
     <script src="https://kit.fontawesome.com/fe060c3d5b.js" crossorigin="anonymous"></script>
 </head>
